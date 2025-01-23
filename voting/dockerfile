@@ -14,7 +14,7 @@ COPY --from=build /app/target/voting-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
-RUN useradd app
+RUN adduser --system app
 USER app
 
 CMD ["java","-jar","app.jar"]
