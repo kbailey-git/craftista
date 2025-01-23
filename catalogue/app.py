@@ -28,7 +28,6 @@ def home():
     return render_template('index.html', current_year=datetime.now().year, system_info=system_info, version=app_version)
 
 @app.route('/api/products', methods=['GET'])
-
 def get_products():
     if (config_data.get("data_source") == "db"): 
         conn = get_db_connection()
